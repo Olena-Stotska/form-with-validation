@@ -1,11 +1,6 @@
-.container {
-  display: flex;
-  margin-top: 50px;
-}
-
 .form-block {
-  margin-left: 4%;
-  width: 452px;
+  width: 350px;
+  margin: 0 auto;
 }
 
 .form-group {
@@ -46,6 +41,7 @@
   margin-top: 10px;
   border: 1px solid rgba(96, 144, 192, 0.3);
   background-color: rgba(0, 42, 126, 0.3);
+  padding-bottom: 156px;
   text-align: center;
 
   .logo {
@@ -60,7 +56,7 @@
 
   form {
     margin: 0 auto;
-    width: 316px;
+    width: 250px;
   }
 
   input {
@@ -136,7 +132,7 @@
   .terms-and-conditions {
     display: block;
     color: map-get($colors, primary);
-    margin: 15px 0 164px 0;
+    margin: 10px 0;
 
     a {
       color: map-get($colors, secondary);
@@ -155,6 +151,7 @@
 
   ul {
     display: flex;
+    justify-content: space-around;
     padding: 0;
     margin: 17px 0;
     list-style-type: none;
@@ -162,7 +159,6 @@
   }
 
   a {
-    padding: 0 15px;
     color: map-get($colors, primary);
     transition: color 0.5s;
     text-decoration: none;
@@ -173,9 +169,22 @@
   }
 }
 
-@media(min-width: #{map-get($breakpoints, large)}) {
+@media(min-width: #{map-get($breakpoints, medium)}) {
+
+  .container {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+  }
 
   .form-block {
-    margin-left: 15%;
+    width: 452px;
+    margin: 0;
+  }
+
+  .register-form {
+    form {
+      width: 316px;
+    }
   }
 }
