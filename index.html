@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вулкан</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,800" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="form-block">
+      <nav class="nav-bar">
+        <ul>
+          <li>
+            <a href="#">ИГРОВОЙ ЗАЛ</a>
+          </li>
+          <li>
+            <a href="#">ГАМИНАТОР</a>
+          </li>
+          <li>
+            <a href="#">ЛОТЕРЕИ</a>
+          </li><li>
+            <a href="#">БОНУСЫ</a>
+          </li><li>
+            <a href="#">VIP-КЛУБ</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="register-form">
+        <a href="#" class="logo">
+          <img src="img/logo.png" alt="Logotype">
+        </a>
+        <form name="registerForm" novalidate>
+          <h4 class="register-title">Зарегистрируйся сейчас:</h4>
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Введите Ваше Имя" required
+                  data-error="Введите имя">
+          </div>
+          <div class="form-group">
+            <input type="email" name="mail" placeholder="Введите E-mail" required
+                  data-error="Введите E-mail" data-error-unique="Этот E-mail уже существует">
+          </div>
+          <div class="form-group">
+            <input type="text" name="phone" placeholder="Введите телефон" required
+                  pattern="^[+\d][\d -]+\d$" data-error="Формат: +38 096 123 45 67">
+          </div>
+          <div class="form-group">
+            <input type="password" name="password" placeholder="Введите пароль" minlength="6" required
+                  data-error="Не менее 6 символов">
+          </div>
+          <button class="btn-register">
+            <span class="btn-title">РЕГИСТРАЦИЯ</span>
+          </button>
+          <small class="terms-and-conditions">
+            Регистрируясь в казино Русский Вулкан, <br>
+            Вы соглашаетесь с
+            <a href="#">правилами казино</a>.
+          </small>
+        </form
+>      </div>
+    </div>
+
+    <div class="join-us">
+      <div class="join-title">присоединяйтесь</div>
+      <div class="join-title">к <strong class="count">8 756</strong></div>
+      <div class="join-title">счастливчикам</div>
+    </div>
+  </div>
+
+  <footer>
+    <img src="img/footer.png" alt="Partners">
+  </footer>
+
+  <script src="js/index.js"></script>
+</body>
+</html>

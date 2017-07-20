@@ -1,0 +1,26 @@
+@import './variables';
+@import './animations';
+@import './form';
+@import './join-section';
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 14px;
+}
+
+body {
+  background-color: map-get($colors, bg-color);
+  min-width: $min-width;
+  font-family: 'Open Sans', sans-serif;
+}
+
+footer {
+  text-align: center;
+  margin: 70px 0 110px 0;
+}

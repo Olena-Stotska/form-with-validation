@@ -1,0 +1,15 @@
+{
+  "name": "goodsellus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build.sass": "node-sass ./css/style.scss -o ./css --include-path ./node_modules/bootstrap-sass/assets/stylesheets --output-style compressed",
+    "watch.sass": "npm run build.sass -- -w ./css"
+  },
+  "author": "Lena Stotska",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.5.3"
+  }
+}
