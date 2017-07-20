@@ -12,7 +12,5 @@
   "devDependencies": {
     "node-sass": "^4.5.3"
   },
-  "dependencies": {
-    "siiimple-toast": "^2.0.0"
-  }
+  "dependencies": {}
 }
