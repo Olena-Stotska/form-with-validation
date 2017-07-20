@@ -1,5 +1,6 @@
-(function() {
+(function(Toaster) {
   var form = document.forms.registerForm;
+  var toaster = new Toaster();
   var API_URL = 'https://test-task-182e1.firebaseio.com/users/';
 
   function request(url, options) {
@@ -38,14 +39,14 @@
         data: JSON.stringify(serializeForm(form)),
 
         onError: function() {
-          alert('Server is not responsive. Please try again later');
+          toaster.alert('Server is not responsive. Please try again later');
         },
 
         onLoad: function(response) {
           if (response.error) {
-            alert('Something is wrong!');
+            toaster.alert('Something is wrong!');
           } else {
-            alert('Congratulation! You have been successfully registered :)');
+            toaster.success('Congratulation! You have been successfully registered :)');
             form.reset();
           }
         }
@@ -98,6 +99,10 @@
     }
   }
 
+  function sanitizeEmail(email) {
+    return email.replace(/[$. ]/, ',');
+  }
+
   var emailRequest;
   function validateEmailUniqueness(input) {
     if (emailRequest) {
@@ -116,7 +121,7 @@
     input.classList.add('waiting');
     emailRequest = request(API_URL + sanitizeEmail(input.value) + '.json', {
       onError: function() {
-        alert('Server is not responsive. Please try again later')
+        toaster.alert('Server is not responsive. Please try again later')
         input.classList.remove('waiting');
         emailRequest = null;
       },
@@ -141,5 +146,5 @@
   });
 
   form.addEventListener('submit', tryToRegisterUser, false);
-})();
+})(siiimpleToast);
 

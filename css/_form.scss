@@ -21,7 +21,7 @@
   margin-left: 5px;
   padding: 10px 15px;
   white-space: nowrap;
-  color: map-get($colors, btn-bg);
+  color: map-get($colors, danger);
   background: map-get($colors, btn-text);
   box-shadow: 1px 0 10px 0 rgba(255,255,255,0.6);
   border-radius: $border-radius;
